@@ -1,0 +1,73 @@
+:root {
+  /* Colors: */
+  --unnamed-color-6c63ff: #6c63ff;
+  --unnamed-color-17ac9d: #17ac9d;
+  --unnamed-color-283e51: #283e51;
+  --unnamed-color-f5f5f5: #f5f5f5;
+  --unnamed-color-ffffff: #ffffff;
+  --unnamed-color-283e51cc: #283e51cc;
+
+  /* Font/text values */
+  --unnamed-font-family-gilroy: Gilroy;
+  --unnamed-font-family-butler: Butler;
+  --unnamed-font-style-normal: normal;
+  --unnamed-font-weight-300: 300px;
+  --unnamed-font-weight-bold: bold;
+  --unnamed-font-weight-normal: normal;
+  --unnamed-font-size-20: 20px;
+  --unnamed-font-size-36: 36px;
+  --unnamed-font-size-46: 46px;
+  --unnamed-font-size-72: 72px;
+  --unnamed-character-spacing-0: 0px;
+  --unnamed-line-spacing-33: 33px;
+  --unnamed-line-spacing-42: 42px;
+  --unnamed-line-spacing-66: 66px;
+  --unnamed-line-spacing-90: 90px;
+}
+
+@font-face {
+  font-family: "Butler-Regular";
+  src: url("../fonts/Butler_Regular.woff");
+}
+
+@font-face {
+  font-family: "Butler-Light";
+  src: url("../fonts/Butler_Light.woff");
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("../fonts/Gilroy-Medium.woff");
+}
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("../fonts/Gilroy-Light.woff");
+}
+
+@font-face {
+  font-family: "Rockness";
+  src: url("../fonts/Rockness.woff");
+}
+
+* {
+  /* border: 1px solid red; */
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.services-cards-title{
+  font-family: "Butler-Light";
+  color: var(--unnamed-color-283e51);
+  text-align: center;
+  font-size: 50px;
+  font-weight: 100;
+}

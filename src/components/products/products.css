@@ -1,0 +1,107 @@
+.products-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.products-title h2 {
+  font-family: "Gilroy-Medium", sans-serif;
+  color: var(--unnamed-color-283e51);
+  font-weight: bolder;
+  font-size: 38px;
+  word-spacing: 3px;
+  position: relative;
+}
+
+.products-title span {
+  font-family: "Rockness";
+  color: var(--unnamed-color-17ac9d);
+  font-weight: 100;
+  font-size: 50px;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+
+.products-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 5rem;
+}
+
+.products-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 50px #67859e26;
+  border-radius: 24px;
+  opacity: 1;
+  padding-block: 2rem;
+}
+
+.product-card-title {
+  font-family: "Gilroy-Medium";
+  color: var(--unnamed-color-283e51);
+  text-align: center;
+  font-size: 38px;
+  position: relative;
+}
+
+.product-card-title::after {
+  position: absolute;
+  content: "";
+  opacity: 1;
+  height: 4px;
+  bottom: -10px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  background: var(--unnamed-color-17ac9d);
+}
+
+.product-card-description {
+  font-family: "Gilroy-Light";
+}
+
+.product-card-img {
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  .products-title {
+    margin-bottom: 2rem;
+  }
+
+  .products-title h2 {
+    font-size: 28px;
+  }
+
+  .products-title span {
+    font-size: 38px;
+    right: 30px;
+  }
+
+  .products-card-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  .products-card {
+    padding: 2rem;
+  }
+
+  .product-card-title {
+    font-size: 28px;
+  }
+
+  .product-card-img {
+    width: 100%;
+  }
+}

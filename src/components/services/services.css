@@ -1,0 +1,91 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.services h1 {
+  font-family: "Butler-Regular";
+  color: var(--unnamed-color-283e51);
+  font-size: var(--unnamed-font-size-72);
+  color: #283e51;
+  font-weight: var(--unnamed-font-weight-normal);
+  margin-block: 2rem;
+}
+
+.services-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 5rem;
+  padding-bottom: 7rem;
+  padding-top: 3rem;
+  box-shadow: 0px 0px 50px #67859e26;
+  border-radius: 24px;
+  width: 50%;
+  gap: 1rem;
+  font-family: "Gilroy-Light";
+  font-weight: var(--unnamed-font-weight-normal);
+  line-height: 1.6;
+}
+
+.services-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem 15rem;
+  margin-bottom: 2rem;
+}
+
+.services-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 50px #67859e26;
+  border-radius: 24px;
+  gap: 1rem;
+  padding: 3rem 1rem;
+  width: 80%;
+}
+
+.services-cards img {
+  width: 100%;
+  height: 100%;
+}
+
+.services-cards h5{
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  color: var(--unnamed-color-283e51);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .services-card {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .services-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .services h1 {
+    font-size: 46px;
+    text-align: center;
+  }
+
+  .services-cards-grid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem;
+  }
+}
