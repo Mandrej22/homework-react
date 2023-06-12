@@ -1,0 +1,145 @@
+.logo
+  width: 32px
+  height: 30px
+  padding: 2rem 8rem
+
+.main-nav
+  font-family: "Gilroy-Medium"
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-block: 3rem
+  padding-inline: 3rem
+
+.inverted-nav
+  background-color: var(--unnamed-color-17ac9d)
+  margin-bottom: 0
+
+.nav-list
+  display: flex
+  list-style: none
+  justify-items: center
+  align-items: center
+  gap: 3rem
+
+  li
+    font: var(--unnamed-font-style-normal) normal medium var(--unnamed-font-size-20) / 28px var(--unnamed-font-family-gilroy)
+    letter-spacing: var(--unnamed-character-spacing-0)
+    color: #67859e
+    opacity: 1
+    font-weight: 400
+    position: relative
+
+    &::after
+      position: absolute
+      content: ""
+      opacity: 0
+      height: 4px
+      bottom: -10px
+      margin: 0 auto
+      left: 0
+      right: 0
+      width: 50%
+      background: var(--unnamed-color-17ac9d)
+
+    &:hover::after
+      opacity: 1
+      transition: opacity 0.5s ease-out
+
+.nav-language
+  margin-inline: 3rem
+  border: 1px solid #67859e
+  opacity: 1
+  padding: 0.4rem
+  cursor: pointer
+
+.inverted
+  li
+    color: var(--unnamed-color-f5f5f5)
+
+  &-lang
+    border: 1px solid var(--unnamed-color-f5f5f5)
+
+  > li::after
+    position: absolute
+    content: ""
+    opacity: 0
+    height: 4px
+    bottom: -10px
+    margin: 0 auto
+    left: 0
+    right: 0
+    width: 50%
+    background: var(--unnamed-color-f5f5f5)
+
+  li:hover::after
+    opacity: 1
+    transition: opacity 0.5s ease-out
+
+.menu-toggle
+  display: none
+  cursor: pointer
+
+.hamburger
+  width: 20px
+  height: 2px
+  background-color: #67859e
+  margin: 4px 0
+  transition: transform 0.3s ease
+
+  .open &
+    transform: rotate(45deg)
+
+  .open &:nth-child(2)
+    opacity: 0
+
+  .open &:nth-child(3)
+    transform: rotate(-45deg)
+
+@media (max-width: 768px)
+  /* Existing styles */
+
+  .nav-list
+    margin-top: 1rem
+    flex-direction: column
+    gap: 1rem
+    display: none
+
+    &.open
+      display: flex
+
+  .menu-toggle
+    display: block
+    margin-left: auto
+    padding: 1rem
+
+  .hamburger
+    position: relative
+    background-color: #67859e
+    transition: transform 0.3s ease
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      width: 20px
+      height: 2px
+      background-color: #67859e
+      transition: transform 0.3s ease
+
+    &:before
+      top: -6px
+
+    &:after
+      bottom: -6px
+
+  .open .hamburger
+    background-color: transparent
+
+    &:before
+      transform: rotate(45deg)
+      top: 0
+
+    &:after
+      transform: rotate(-45deg)
+      bottom: 0

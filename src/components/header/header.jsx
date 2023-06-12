@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../header/header.css';
+import styles from '../header/header.module.sass';
 import logo from '../../assets/svgs/logo.svg';
 
 function Logo() {
@@ -18,7 +18,7 @@ function NavItem({ href, label }) {
 
 function LanguageIndicator({ language }) {
   return (
-    <li className="nav-language">{language}</li>
+    <li className={styles['nav-language']}>{language}</li>
   );
 }
 
@@ -30,15 +30,15 @@ function Header() {
   };
 
   return (
-    <header className="header">
-      <nav className={`main-nav ${isMenuOpen ? 'open' : ''}`}>
+    <header className={styles.header}>
+      <nav className={`${styles['main-nav']} ${isMenuOpen ? styles.open : ''}`}>
         <a href="#">
           <Logo />
         </a>
-        <div className="menu-toggle" onClick={toggleMenu}>
-          <div className={`hamburger ${isMenuOpen ? 'open' : ''}`} />
+        <div className={styles['menu-toggle']} onClick={toggleMenu}>
+          <div className={`${styles.hamburger} ${isMenuOpen ? styles.open : ''}`} />
         </div>
-        <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
+        <ul className={`${styles['nav-list']} ${isMenuOpen ? styles.open : ''}`}>
           <NavItem href="#" label="Home" />
           <NavItem href="#" label="Services" />
           <NavItem href="#" label="StartUp" />

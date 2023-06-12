@@ -1,39 +1,40 @@
-import React from 'react'
-import '../services.css'
-import image1 from '../../../assets/svgs/Group 1045.svg'
+import React from 'react';
+import styles from '../services.module.sass';
+import image1 from '../../../assets/svgs/Group 1045.svg';
 
 function ServicesCards() {
   const products = {
     product1: {
-      title: "Mobile apps development",
+      title: 'Mobile apps development',
       imageSrc: image1,
-      productUrl: "#"
+      productUrl: '#',
     },
     product2: {
-      title: "Website development",
+      title: 'Website development',
       imageSrc: image1,
-      productUrl: "#"
+      productUrl: '#',
     },
     product3: {
-      title: "SaaS",
+      title: 'SaaS',
       imageSrc: image1,
-      productUrl: "#"
-    }
+      productUrl: '#',
+    },
   };
 
   return (
-    <div className='services-cards-grid'>
-    {Object.values(products).map((product) => (
-      <div className='services-cards'>
-      <a href={product.productUrl}>
-      <img src={product.imageSrc} alt="design"/>
-      <h5>{product.title}</h5>
-     </a>
+    <div className={styles.services}>
+      <div className={styles['services-cards-grid']}>
+        {Object.values(products).map((product) => (
+          <div className={styles['services-cards']} key={product.title}>
+            <a href={product.productUrl}>
+              <img src={product.imageSrc} alt="design" />
+              <h5>{product.title}</h5>
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
-     ))}
-    </div>
-   
-  )
+  );
 }
 
-export default ServicesCards
+export default ServicesCards;

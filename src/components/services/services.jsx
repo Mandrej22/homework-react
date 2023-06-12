@@ -1,6 +1,6 @@
-import React from 'react'
-import '../services/services.css'
-import ServicesDesign from '../../assets/svgs/Group 1045.svg'
+import React from 'react';
+import styles from '../services/services.module.sass';
+import ServicesDesign from '../../assets/svgs/Group 1045.svg';
 
 function Services() {
   const paragraphs = {
@@ -10,17 +10,16 @@ function Services() {
   };
 
   return (
-    <section className="services">
+    <section className={styles.services}>
       <h1>Software development</h1>
-      <div className="services-card">
-        <img src={ServicesDesign} alt="design" width="675" height="450"/>
-        <img src=""/>
+      <div className={styles['services-card']}>
+        <img src={ServicesDesign} alt="design" width="675" height="450" />
         {Object.values(paragraphs).map((text, index) => (
           <p key={index}>{text}</p>
         ))}
       </div>
     </section>
-  );
+  );  
 }
 
-export default Services
+export default Services;
